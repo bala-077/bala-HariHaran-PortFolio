@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import image from '../Image/balaport2.jpg';
 import menubar from '../Image/menubar.png';
@@ -73,13 +71,6 @@ const Interface = () => {
   const toggleSection = (section) => {
     setActiveSection(activeSection === section ? null : section);
   };
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Easing function
-      once: true, // Whether animation should happen only once
-    });
-  }, []);
 
   return (
     <>
@@ -145,7 +136,7 @@ const Interface = () => {
         <div className='w-full flex justify-center items-center py-10 px-5 md:py-28 bg-gray-50'>
           <div className='max-w-5xl'>
             <div  className='text-center'>
-              <p data-aos="fade-up" className='tracking-[10px] text-gray-500 text-xl'>ABOUT ME</p>
+              <p className='tracking-[10px] text-gray-500 text-xl'>ABOUT ME</p>
               <h1 className='mt-10 text-3xl md:text-4xl font-bold underline'>
                 Who Am I?
               </h1>
